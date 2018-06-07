@@ -1,0 +1,66 @@
+/*
+Project      : Data Karyawan
+Description	 : CRUD (Create, read, Update, Delete) PHP, MySQLi dan Bootstrap
+Author		   : Andiansyah
+Author URI   : https://github.com/Andiansyahandi/Bootstarp-3
+Email	 	 : andiansyah252525@gmail.com
+*/
+
+
+.content {
+	margin-top: 80px;
+}
+
+.navbar-default {
+    background-color: rgba(218, 0, 0, 0.575); /* Make the menu become transparent */
+    border-radius: 0px;
+    border: 0;
+    box-shadow: none;
+    padding: 10px;
+    position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+  }
+
+.jumbotron {
+    margin-bottom: 0px;
+    opacity: .8;
+    background-color: rgb(255, 255, 255);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+} 
+
+
+body{
+    background-color: hsl(197, 100%, 76%);
+	-webkit-animation: color 5s ease-in  0s infinite alternate running;
+	-moz-animation: color 5s linear  0s infinite alternate running;
+	animation: color 5s linear  0s infinite alternate running;
+}
+
+/* Animasi + Prefix untuk browser */
+@-webkit-keyframes color {
+    0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@-moz-keyframes color {
+     0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@keyframes color {
+  0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}

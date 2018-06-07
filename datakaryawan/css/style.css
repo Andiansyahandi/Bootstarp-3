@@ -1,0 +1,234 @@
+/*
+Project      : Data Karyawan
+Description	 : CRUD (Create, read, Update, Delete) PHP, MySQLi dan Bootstrap
+Author		   : Andiansyah
+Author URI   : https://github.com/Andiansyahandi/Bootstarp-3
+Email	 	 : andiansyah0425@gmail.com, andiansyah252525@gmail.com
+*/
+
+.content {
+	margin-top: 80px;
+}
+body{
+    background-color: hsl(197, 100%, 76%);
+	-webkit-animation: color 5s ease-in  0s infinite alternate running;
+	-moz-animation: color 5s linear  0s infinite alternate running;
+	animation: color 5s linear  0s infinite alternate running;
+}
+
+/* Animasi + Prefix untuk browser */
+@-webkit-keyframes color {
+    0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@-moz-keyframes color {
+     0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+@keyframes color {
+  0% { background-color: #f1c40f; }
+    32% { background-color: #e74c3c; }
+    55% { background-color: #9b59b6; }
+    76% { background-color: #16a085; }
+    100% { background-color: #2ecc71; }
+}
+
+.container-fluid.main{
+    position: relative; /* To make the navbar positions relative to this container */
+    padding: 0;
+  }
+  
+  .navbar-default {
+    background-image: none;
+    background-color: rgba(97, 97, 97, 0.575); /* Make the menu become transparent */
+    border-radius: 0px;
+    border: 0;
+    box-shadow: none;
+    padding: 10px;
+    position: absolute; /* Make the menu out of the document flow so it can placed anywhere without disturbing other widgets */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* If you delete this line, your menu link won't be clicked because it is behind the background. Applying this code bring the menu in front of the background */
+  }
+  
+.navbar-brand {
+    
+  }
+  
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+  }
+  
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  
+  .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+  }
+  
+  .logo-login {
+    margin-top: 15%;
+    position: absolute;
+    font-size: 30px;
+    background: rgb(0, 0, 0);
+    color: #FFFFFF;
+    padding: 10px 18px;
+    top: -40px;
+    border-radius: 50%;
+    left: 40%;
+  }
+
+  button {
+    background-color: rgba(255, 0, 0, 0.575);
+
+  }
+
+  .btn-login {
+    background-color: rgba(0, 0, 0, 0.575);
+  }
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-color: rgba(66, 66, 66, 0.575);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    opacity: .9;
+} 
+
+.jum-login{
+    margin-bottom: 0px;
+    background-image: url('../img/2.png');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+} 
+
+.jum-contact {
+    margin-bottom: 0px;
+    background-image: url('../img/2.png');
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    opacity: .9;
+} 
+
+
+.mainContent {
+  width: 35%;
+  margin: 2.5em auto;
+  background: #fff;
+  padding: 2.5em;
+}
+.contactFrm h4 {
+  font-size: 1em;
+  color: #252525;
+  margin-bottom: 0.5em;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.contactFrm input[type="text"], .contactFrm input[type="email"] {
+  width: 70%;
+  outline: none;
+  font-size: 0.9em;
+  padding: .7em 1em;
+  border: 1px solid #000;
+  -webkit-appearance: none;
+  display: block;
+  margin-bottom: 1.2em;
+}
+.contactFrm textarea {
+  resize: none;
+  width: 93.5%;
+  font-size: 0.9em;
+  outline: none;
+  padding: .6em 1em;
+  border: 1px solid #000;
+  color: #000
+  min-height: 10em;
+  -webkit-appearance: none;
+}
+.contactFrm input[type="submit"] {
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 0.5em 0;
+  font-size: 1em;
+  margin: 1em 0 0 0;
+  -webkit-appearance: none;
+  background: #006faa;
+  transition: 0.5s all;
+  border: 2px solid #006faa;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  width: 47%;
+  cursor: pointer;
+}
+.contactFrm input[type="submit"]:hover {
+  background: none;
+  color: #006faa;
+}
+
+p.statusMsg{font-size:18px;}
+p.succdiv{color: #008000;}
+p.errordiv{color:#E80000;}
+
+table,tr,td{
+  background-color: LightGoldenRodYellow ;
+  font-family: Verdana;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  border-collapse: collapse;
+}
+.h{
+  border: 8px groove rgb(255, 8, 0);
+  padding: 20px;
+}
+.posisi{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+}
+body{
+  background-image: url('images.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px auto;
+}
